@@ -1,29 +1,30 @@
-import { Component, computed, signal, effect } from '@angular/core';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+interface TaskLink {
+  path: string;
+  title: string;
+  topic: string;
+}
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-
-  // Signals
-  
-  counter = signal<number>(0);
-  doubleCounterValue = computed(() => this.counter() * 2);
-  
-  onClickReset(): void {
-    this.counter.set(0);
-    this.log;
-  };
-  
-  onClickAdd(): void {
-    this.counter.update(val => val + 1);
-    this.log;
-  };
-  
-  private log = effect(() => {
-    console.log(`New counter value = ${this.counter()}`);
-  });
+  // Обычный массив, а не сигнал: список задач не меняется во время работы приложения.
+  readonly tasks: TaskLink[] = [
+    {
+      path: '/tasks/computed-cart-total',
+      title: 'Корзина: итоги на computed',
+      topic: 'Блок 1 · signal + computed',
+    },
+    {
+      path: '/tasks/effect-session-timer',
+      title: 'Таймер сессии на effect',
+      topic: 'Блок 1 · effect',
+    },
+  ];
 }

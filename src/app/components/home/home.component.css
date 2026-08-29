@@ -1,0 +1,15 @@
+.tasks {
+  list-style: none;
+  padding: 0;
+}
+
+.tasks li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.topic {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}

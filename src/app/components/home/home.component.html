@@ -1,5 +1,10 @@
-<h1>Counter = {{ counter() }}</h1>
-<h2>Computed = {{ doubleCounterValue() }}</h2>
+<h1>Задачи</h1>
 
-<button type="button" (click)="onClickAdd()">+1</button>
-<button type="button" (click)="onClickReset()">Reset value</button>
+<ul class="tasks">
+  @for (task of tasks; track task.path) {
+    <li>
+      <a [routerLink]="task.path">{{ task.title }}</a>
+      <span class="topic">{{ task.topic }}</span>
+    </li>
+  }
+</ul>
