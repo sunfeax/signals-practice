@@ -1,1 +1,7 @@
-<h1>Session timer</h1>
+<h1>Session timer {{ timer() }} seconds</h1>
+@if (notification()) {
+  <p>¡Notification!</p>
+}
+<button (click)="reset()" type="button">Reset</button>
+<button (click)="start()" type="button">Start</button>
+<button (click)="pause()" type="button">Pause</button>
