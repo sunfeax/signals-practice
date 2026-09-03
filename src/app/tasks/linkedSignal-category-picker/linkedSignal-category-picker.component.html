@@ -1,0 +1,42 @@
+<h1>Category picker</h1>
+<div>
+  <h2>Categories</h2>
+  <div>
+    <input [(ngModel)]="selectedCategory" type="radio" name="category" id="fruits" value="fruits" />
+    <label for="fruits">Fruits</label>
+  </div>
+  <div>
+    <input
+      [(ngModel)]="selectedCategory"
+      type="radio"
+      name="category"
+      id="vegetables"
+      value="vegetables"
+    />
+    <label for="vegetables">Vegetables</label>
+  </div>
+  <div>
+    <input [(ngModel)]="selectedCategory" type="radio" name="category" id="drinks" value="drinks" />
+    <label for="drinks">Drinks</label>
+  </div>
+  <button (click)="apply()" type="button">Apply</button>
+
+  <div>
+    <h2>Products</h2>
+    <div class="product-list">
+      @for (p of productsFiltered(); track p.id) {
+        <div
+          class="product"
+          (click)="selectProduct(p)"
+          [class.selected]="selectedProduct().id === p.id"
+        >
+          <h3>{{ p.name }}</h3>
+          <p>{{ p.category }}</p>
+          <p>{{ p.price }}</p>
+        </div>
+      } @empty {
+        <p>There aren't products</p>
+      }
+    </div>
+  </div>
+</div>

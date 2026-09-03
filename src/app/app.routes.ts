@@ -17,5 +17,12 @@ export const routes: Routes = [
         (m) => m.EffectSessionTimerComponent,
       ),
   },
+  {
+    path: 'tasks/linkedSignal-category-picker',
+    loadComponent: () =>
+      import(
+        './tasks/linkedSignal-category-picker/linkedSignal-category-picker.component'
+      ).then((m) => m.LinkedSignalCategoryPickerComponent),
+  },
   { path: '**', redirectTo: '' },
 ];

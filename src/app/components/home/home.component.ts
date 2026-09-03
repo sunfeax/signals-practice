@@ -26,5 +26,10 @@ export class HomeComponent {
       title: 'Таймер сессии на effect',
       topic: 'Блок 1 · effect',
     },
+    {
+      path: '/tasks/linkedSignal-category-picker',
+      title: 'Выбор товара на linkedSignal',
+      topic: 'Блок 1 · linkedSignal',
+    },
   ];
 }
