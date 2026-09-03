@@ -11,7 +11,7 @@ interface TaskLink {
   selector: 'app-home',
   imports: [RouterLink],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   // Обычный массив, а не сигнал: список задач не меняется во время работы приложения.

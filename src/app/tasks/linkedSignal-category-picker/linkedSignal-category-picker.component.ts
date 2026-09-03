@@ -14,7 +14,7 @@ type Category = 'fruits' | 'vegetables' | 'drinks';
   selector: 'app-linked-signal-category-picker',
   imports: [FormsModule],
   templateUrl: './linkedSignal-category-picker.component.html',
-  styleUrl: './linkedSignal-category-picker.component.css',
+  styleUrl: './linkedSignal-category-picker.component.scss',
 })
 export class LinkedSignalCategoryPickerComponent {
   products: Product[] = [

@@ -6,7 +6,7 @@ type TimerState = 'started' | 'paused' | 'initial';
   selector: 'app-effect-session-timer',
   imports: [],
   templateUrl: './effect-session-timer.component.html',
-  styleUrl: './effect-session-timer.component.css',
+  styleUrl: './effect-session-timer.component.scss',
 })
 export class EffectSessionTimerComponent {
   constructor() {

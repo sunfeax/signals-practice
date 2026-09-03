@@ -11,7 +11,7 @@ interface Item {
   selector: 'app-computed-cart-total',
   imports: [],
   templateUrl: './computed-cart-total.component.html',
-  styleUrl: './computed-cart-total.component.css',
+  styleUrl: './computed-cart-total.component.scss',
 })
 export class ComputedCartTotalComponent {
   cart = signal<Item[]>([

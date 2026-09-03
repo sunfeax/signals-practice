@@ -7,10 +7,10 @@
 .product {
   background-color: azure;
   border: 2px solid gray;
-}
 
-.product.selected {
-  background-color: rgb(99, 39, 210);
-  border: 2px solid rgb(255, 0, 208);
-  color: white;
+  &.selected {
+    background-color: rgb(99, 39, 210);
+    border: 2px solid rgb(255, 0, 208);
+    color: white;
+  }
 }
