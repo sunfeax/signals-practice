@@ -1,0 +1,13 @@
+<h1>Price tag</h1>
+<div>
+  <h2>Prodcuts</h2>
+  <div>
+    @for (p of products(); track $index) {
+      <p>{{ p.name }}</p>
+      <app-price-tag
+        [productPrice]="p.price"
+        [productDiscountPercent]="p.discountPercent"
+      ></app-price-tag>
+    }
+  </div>
+</div>

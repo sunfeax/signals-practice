@@ -31,5 +31,10 @@ export class HomeComponent {
       title: 'Выбор товара на linkedSignal',
       topic: 'Блок 1 · linkedSignal',
     },
+    {
+      path: '/tasks/input-price-tag',
+      title: 'Ценник товара на input()',
+      topic: 'Блок 2 · input',
+    },
   ];
 }

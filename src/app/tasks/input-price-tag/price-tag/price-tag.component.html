@@ -1,0 +1,9 @@
+<div>
+  @if (productDiscountPercent() > 0) {
+    <span class="initial-price">{{ productPrice() }}</span>
+    <span class="final-price">{{ total() }}</span>
+    <span>Discount: {{ this.productDiscountPercent() }}%</span>
+  } @else {
+    <span class="normal-price">{{ productPrice() }}</span>
+  }
+</div>

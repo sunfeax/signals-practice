@@ -24,5 +24,12 @@ export const routes: Routes = [
         './tasks/linkedSignal-category-picker/linkedSignal-category-picker.component'
       ).then((m) => m.LinkedSignalCategoryPickerComponent),
   },
+  {
+    path: 'tasks/input-price-tag',
+    loadComponent: () =>
+      import('./tasks/input-price-tag/input-price-tag.component').then(
+        (m) => m.InputPriceTagComponent,
+      ),
+  },
   { path: '**', redirectTo: '' },
 ];
