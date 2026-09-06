@@ -1,4 +1,14 @@
 <h1>Ticket booking</h1>
 
-<h3>{{ this.counter() }}</h3>
-<app-quantity-stepper [(count)]="counter"></app-quantity-stepper>
+<div>
+  <aside>
+    @for (o of orders(); track o.id) {
+      <p>Order Nº{{ o.id }}</p>
+      <p>{{ o.tickets }}</p>
+    }
+  </aside>
+  <app-quantity-stepper
+    [(quantity)]="ticketAmount"
+    (bookRequest)="placeOrder()"
+  ></app-quantity-stepper>
+</div>

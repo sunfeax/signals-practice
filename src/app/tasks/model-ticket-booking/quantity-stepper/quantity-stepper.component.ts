@@ -1,4 +1,4 @@
-import { Component, model } from '@angular/core';
+import { Component, model, output } from '@angular/core';
 
 @Component({
   selector: 'app-quantity-stepper',
@@ -7,13 +7,20 @@ import { Component, model } from '@angular/core';
   styleUrl: './quantity-stepper.component.scss',
 })
 export class QuantityStepperComponent {
-  count = model<number>(0);
+  quantity = model<number>(1);
+  bookRequest = output();
 
   increment(): void {
-    this.count.update(v => v + 1);
+    if (this.quantity() >= 10) return;
+    this.quantity.update(v => v + 1);
   }
 
   decrement(): void {
-    this.count.update(v => v - 1);
+    if (this.quantity() <= 1) return;
+    this.quantity.update(v => v - 1);
+  }
+
+  book(): void {
+    this.bookRequest.emit();
   }
 }
