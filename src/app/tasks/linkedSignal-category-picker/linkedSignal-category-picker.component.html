@@ -42,7 +42,8 @@
     <h2>Products</h2>
     <div class="product-list">
       @for (p of productsFiltered(); track p.id) {
-        <div
+        <button
+          type="button"
           class="product"
           (click)="selectProduct(p)"
           [class.selected]="selectedProduct().id === p.id"
@@ -50,7 +51,7 @@
           <h3>{{ p.name }}</h3>
           <p>{{ p.category }}</p>
           <p>{{ p.price }}</p>
-        </div>
+        </button>
       } @empty {
         <p>There aren't products</p>
       }
