@@ -36,5 +36,10 @@ export class HomeComponent {
       title: 'Ценник товара на input()',
       topic: 'Блок 2 · input',
     },
+    {
+      path: '/tasks/model-ticket-booking',
+      title: 'Бронирование билетов на model/output',
+      topic: 'Блок 2 · model, output',
+    },
   ];
 }

@@ -13,6 +13,8 @@ export class PriceTagComponent {
   });
 
   total = computed(
-    () => this.productPrice() - (this.productPrice() * this.productDiscountPercent()) / 100,
+    () =>
+      this.productPrice() -
+      (this.productPrice() * this.productDiscountPercent()) / 100,
   );
 }

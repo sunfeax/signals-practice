@@ -2,7 +2,13 @@
 <div>
   <h2>Categories</h2>
   <div>
-    <input [(ngModel)]="selectedCategory" type="radio" name="category" id="fruits" value="fruits" />
+    <input
+      [(ngModel)]="selectedCategory"
+      type="radio"
+      name="category"
+      id="fruits"
+      value="fruits"
+    />
     <label for="fruits">Fruits</label>
   </div>
   <div>
@@ -16,10 +22,21 @@
     <label for="vegetables">Vegetables</label>
   </div>
   <div>
-    <input [(ngModel)]="selectedCategory" type="radio" name="category" id="drinks" value="drinks" />
+    <input
+      [(ngModel)]="selectedCategory"
+      type="radio"
+      name="category"
+      id="drinks"
+      value="drinks"
+    />
     <label for="drinks">Drinks</label>
   </div>
-  <button (click)="apply()" type="button">Apply</button>
+  <button
+    (click)="apply()"
+    type="button"
+  >
+    Apply
+  </button>
 
   <div>
     <h2>Products</h2>

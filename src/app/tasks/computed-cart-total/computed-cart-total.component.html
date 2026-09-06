@@ -5,9 +5,24 @@
       <div>
         <p>{{ item.title }} - {{ item.price }} € - {{ item.qty }} pcs</p>
         <div>
-          <button (click)="increaseItem(item.id)" type="button">+</button>
-          <button (click)="decreaseItem(item.id)" type="button">-</button>
-          <button (click)="deleteItem(item.id)" type="button">Delete</button>
+          <button
+            (click)="increaseItem(item.id)"
+            type="button"
+          >
+            +
+          </button>
+          <button
+            (click)="decreaseItem(item.id)"
+            type="button"
+          >
+            -
+          </button>
+          <button
+            (click)="deleteItem(item.id)"
+            type="button"
+          >
+            Delete
+          </button>
         </div>
       </div>
     }
@@ -18,5 +33,10 @@
 <div>
   <h2>Total price: {{ totalPrice() }} €</h2>
   <h2>Total items: {{ totalQuantity() }} pcs</h2>
-  <button (click)="clearCart()" type="button">Clear cart</button>
+  <button
+    (click)="clearCart()"
+    type="button"
+  >
+    Clear cart
+  </button>
 </div>

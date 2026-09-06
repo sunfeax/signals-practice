@@ -35,7 +35,9 @@ export class LinkedSignalCategoryPickerComponent {
 
   apply(): void {
     if (this.selectedCategory() === null) return;
-    this.productsFiltered.set(this.products.filter((p) => p.category === this.selectedCategory()));
+    this.productsFiltered.set(
+      this.products.filter(p => p.category === this.selectedCategory()),
+    );
     return;
   }
 

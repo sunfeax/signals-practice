@@ -10,9 +10,12 @@ type TimerState = 'started' | 'paused' | 'initial';
 })
 export class EffectSessionTimerComponent {
   constructor() {
-    effect((onCleanup) => {
+    effect(onCleanup => {
       if (this.state() === 'started') {
-        const intervalId = setInterval(() => this.timer.update((v) => v + 1), 1000);
+        const intervalId = setInterval(
+          () => this.timer.update(v => v + 1),
+          1000,
+        );
         onCleanup(() => clearInterval(intervalId));
       }
     });

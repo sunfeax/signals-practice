@@ -20,18 +20,24 @@ export class ComputedCartTotalComponent {
     { id: 3, title: 'Mouse pad', price: 700, qty: 3 },
   ]);
 
-  totalPrice = computed(() => this.cart().reduce((sum, item) => sum + item.price * item.qty, 0));
-  totalQuantity = computed(() => this.cart().reduce((sum, item) => sum + item.qty, 0));
+  totalPrice = computed(() =>
+    this.cart().reduce((sum, item) => sum + item.price * item.qty, 0),
+  );
+  totalQuantity = computed(() =>
+    this.cart().reduce((sum, item) => sum + item.qty, 0),
+  );
 
   increaseItem(itemId: number): void {
-    this.cart.update((cart) => {
-      return cart.map((item) => (item.id === itemId ? { ...item, qty: item.qty + 1 } : item));
+    this.cart.update(cart => {
+      return cart.map(item =>
+        item.id === itemId ? { ...item, qty: item.qty + 1 } : item,
+      );
     });
   }
 
   decreaseItem(itemId: number): void {
-    this.cart.update((cart) => {
-      return cart.map((item) => {
+    this.cart.update(cart => {
+      return cart.map(item => {
         if (item.id === itemId && item.qty > 1) {
           return { ...item, qty: item.qty - 1 };
         } else {
@@ -42,8 +48,8 @@ export class ComputedCartTotalComponent {
   }
 
   deleteItem(itemId: number): void {
-    this.cart.update((cart) => {
-      return cart.filter((item) => item.id !== itemId);
+    this.cart.update(cart => {
+      return cart.filter(item => item.id !== itemId);
     });
   }
 

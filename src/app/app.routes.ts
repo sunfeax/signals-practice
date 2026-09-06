@@ -7,28 +7,35 @@ export const routes: Routes = [
     path: 'tasks/computed-cart-total',
     loadComponent: () =>
       import('./tasks/computed-cart-total/computed-cart-total.component').then(
-        (m) => m.ComputedCartTotalComponent,
+        m => m.ComputedCartTotalComponent,
       ),
   },
   {
     path: 'tasks/effect-session-timer',
     loadComponent: () =>
       import('./tasks/effect-session-timer/effect-session-timer.component').then(
-        (m) => m.EffectSessionTimerComponent,
+        m => m.EffectSessionTimerComponent,
       ),
   },
   {
     path: 'tasks/linkedSignal-category-picker',
     loadComponent: () =>
-      import(
-        './tasks/linkedSignal-category-picker/linkedSignal-category-picker.component'
-      ).then((m) => m.LinkedSignalCategoryPickerComponent),
+      import('./tasks/linkedSignal-category-picker/linkedSignal-category-picker.component').then(
+        m => m.LinkedSignalCategoryPickerComponent,
+      ),
   },
   {
     path: 'tasks/input-price-tag',
     loadComponent: () =>
       import('./tasks/input-price-tag/input-price-tag.component').then(
-        (m) => m.InputPriceTagComponent,
+        m => m.InputPriceTagComponent,
+      ),
+  },
+  {
+    path: 'tasks/model-ticket-booking',
+    loadComponent: () =>
+      import('./tasks/model-ticket-booking/model-ticket-booking.component').then(
+        m => m.ModelTicketBookingComponent,
       ),
   },
   { path: '**', redirectTo: '' },
